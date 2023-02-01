@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/pngwing.com.png">
+    <title>Love Calculator Generator </title>
+    <link rel="stylesheet" href="love.css">
+</head>
+<body>
+   
+    <div id="heading">
+        <h1>  A Javascript Project BY Rahul Choudhary </h1>
+
+    </div>
+<div class="container">
+<div class="content">
+    <img src="images/pngwing.com.png" alt="">
+<h1> Love Calculator </h1>
+<div class="inputarea">
+ <input type="text" placeholder="Your Name" id="Firstname" onfocus="this.value = ''">
+ <input type="text" placeholder=" Their Name" id="Secondname" onfocus="this.value = ''">
+</div>
+
+<a href="a" onclick="love()"> CLick me To know </a>
+<p id="print"> Your Relation result is here</p>
+<p id="statment"></p>
+</div>
+
+
+</div>
+<script>
+    function love()
+    {
+    var name1 = document.getElementById("Firstname").value;
+    var name2 = document.getElementById("Secondname").value;
+    if(name1.length<=2 || name2.length<=2)
+    {
+        alert("Enter at least Three characters of your name ");
+    }
+    else
+    {
+        var random = Math.floor(Math.random()*100);
+        document.getElementById("print").innerHTML= name1 +" and " +name2 + "=" + random + "%" + "of Love " ;
+
+    }
+    if(random <=0 || random <= 50)
+    {
+document.getElementById("statment").innerHTML="Time Pass Relationship";
+    }
+  else if(random <= 51 || random <= 100)
+    {
+document.getElementById("statment").innerHTML="Lovely Relationship";
+    }
+}
+   
+</script>
+   
+
+</body>
+</html>
