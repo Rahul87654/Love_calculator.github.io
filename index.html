@@ -34,23 +34,31 @@
     {
     var name1 = document.getElementById("Firstname").value;
     var name2 = document.getElementById("Secondname").value;
+    
+
     if(name1.length<=2 || name2.length<=2)
     {
         alert("Enter at least Three characters of your name ");
     }
-    else
+
+    if(name1 === "Rahul" || name2 === "Rahul")
+    {
+        document.getElementById("print").innerHTML= name1 +" and " + name2 + " = " + 100 + "% " + "of Love " ;
+        document.getElementById("statment").innerHTML="The greatest happiness of your life will be the conviction that you guys are in love!!";
+    }
+    else 
     {
         var random = Math.floor(Math.random()*100);
-        document.getElementById("print").innerHTML= name1 +" and " +name2 + "=" + random + "%" + "of Love " ;
+        document.getElementById("print").innerHTML= name1 +" and " + name2 + " = " + random + "% " + "of Love " ;
 
     }
     if(random <=0 || random <= 50)
     {
-document.getElementById("statment").innerHTML="Time Pass Relationship";
+document.getElementById("statment").innerHTML="I think you both deserve the better person out there !!";
     }
   else if(random <= 51 || random <= 100)
     {
-document.getElementById("statment").innerHTML="Lovely Relationship";
+document.getElementById("statment").innerHTML="The greatest happiness of your life will be the conviction that you guys are in love!!";
     }
 }
    
